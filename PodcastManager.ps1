@@ -95,7 +95,7 @@ if(((Test-Path $localFilename) -eq $false) -and ($fileCount -lt $count))
 
 # @("http://revision3.com/destructoid/feed/MP4-hd30", "c:\podcasts\destructoid", 5)
 
-[array]$feedList = ,@("http://podcast.cnbc.com/mmpodcast/lightninground.xml", "C:\Users\Bishops.Move\Music\iTunes\iTunes Media\Podcasts\MAD MONEY W_ JIM CRAMER - Full Episode", -1)
+[array]$feedList = ,@("http://podcast.cnbc.com/mmpodcast/lightninground.xml", "C:\Users\Bishops.Move\Videos\Podcasts\Mad Money", -1)
 [int]$fileCount = 0
 $feedList | %{ GetNewPodcasts -rssURL $_[0] -destFilePath $_[1] -count $_[2] } | %{ $fileCount += $_}
 
